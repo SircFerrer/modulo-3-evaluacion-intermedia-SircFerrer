@@ -1,0 +1,12 @@
+.ListaPokemon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  border: 1px solid grey;
+  width: 250px;
+  border-radius: 10%;
+  background-color: ivory;
+  list-style: none;
+}

@@ -1,16 +1,21 @@
 import React from "react";
+import PokemonStyle from "./Pokemon.css";
 function Pokemon(props) {
   console.log(props);
   const types = props.pokemon.types;
   return (
-    <li>
+    <li className="ListaPokemon">
       <img src={props.pokemon.url} alt="imagen pokemon"></img>
       <h2>{props.pokemon.name}</h2>
       <p>Tipos: </p>
 
-      <ul>
+      <ul className="ListaTypes">
         {types.map((type, index) => {
-          return <li key={index}>{type}</li>;
+          return (
+            <li className="Types" key={index}>
+              {type}
+            </li>
+          );
         })}
       </ul>
     </li>
