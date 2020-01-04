@@ -1,8 +1,8 @@
 import React from "react";
-import "./App.css";
+import "./style/App.css";
 import apiData from "./Api/data.json";
-import PokeList from "./PokeList";
-import Pokemon from "./Pokemon";
+import PokeList from "./components/PokeList";
+import Pokemon from "./components/Pokemon";
 
 class App extends React.Component {
   constructor(props) {

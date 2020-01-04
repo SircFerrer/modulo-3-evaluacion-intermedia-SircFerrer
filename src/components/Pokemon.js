@@ -1,13 +1,13 @@
 import React from "react";
-import PokemonStyle from "./Pokemon.css";
+import propTypes from "prop-types";
+import PokemonStyle from "../style/Pokemon.css";
 function Pokemon(props) {
   console.log(props);
   const types = props.pokemon.types;
   return (
     <li className="ListaPokemon">
-      <img src={props.pokemon.url} alt="imagen pokemon"></img>
+      <img src={props.pokemon.url} alt={props.pokemon.name}></img>
       <h2>{props.pokemon.name}</h2>
-      <p>Tipos: </p>
 
       <ul className="ListaTypes">
         {types.map((type, index) => {
@@ -21,4 +21,10 @@ function Pokemon(props) {
     </li>
   );
 }
+
+Pokemon.propTypes = {
+  name: propTypes.string,
+  types: propTypes.string
+};
+
 export default Pokemon;
